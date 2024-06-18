@@ -1,0 +1,9 @@
+17/06/2024 20:04:15 https://httpbin.org/status/200 - online: true
+17/06/2024 20:04:15 https://www.alura.com.br - online: true
+17/06/2024 20:04:16 https://www.caelum.com.br - online: true
+17/06/2024 20:04:21 https://httpbin.org/status/200 - online: true
+17/06/2024 20:04:21 https://www.alura.com.br - online: true
+17/06/2024 20:04:22 https://www.caelum.com.br - online: true
+17/06/2024 20:04:27 https://httpbin.org/status/200 - online: true
+17/06/2024 20:04:27 https://www.alura.com.br - online: true
+17/06/2024 20:04:28 https://www.caelum.com.br - online: true
