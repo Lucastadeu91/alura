@@ -1,4 +1,4 @@
-package currentAccounts
+package acconts
 
 import "github.com/Lucastadeu91/alura/banco/clients"
 
