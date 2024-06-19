@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	clientSilvia := clients.Client{"Silvia", "355.546.688.98", "dev"}
-	accountSilvia := acconts.CurrentAccounts{clientSilvia, 123, 123, 1235.}
+	clientSilvia := clients.Client{Name: "Silvia", DigitalNumber: "123.123.123.54", Profession: "Dev"}
+	accountSilvia := acconts.CurrentAccounts{Client: clientSilvia, Agencynumber: 123, Acountnumber: 123, Balance: 1235}
 	fmt.Println(accountSilvia)
 
 }
