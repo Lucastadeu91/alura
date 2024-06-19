@@ -2,13 +2,13 @@ package acconts
 
 import "github.com/Lucastadeu91/alura/banco/clients"
 
-type SavingsAccounts struct {
-	Client                     clients.Client
-	Agencynumber, Acountnumber int
-	balance                    float64
+type CurrentAccounts struct {
+	Client                                clients.Client
+	Agencynumber, Acountnumber, Operation int
+	balance                               float64
 }
 
-func (c *SavingsAccounts) Deposit(deposit float64) (string, float64) {
+func (c *CurrentAccounts) Deposit(deposit float64) (string, float64) {
 	if deposit > 0 {
 		c.balance += deposit
 		return "Deposito realizado com sucesso", c.balance
@@ -17,7 +17,7 @@ func (c *SavingsAccounts) Deposit(deposit float64) (string, float64) {
 	}
 }
 
-func (c *SavingsAccounts) WithdrawBalance(withdraw float64) string {
+func (c *CurrentAccounts) WithdrawBalance(withdraw float64) string {
 	if withdraw > 0 && withdraw <= c.balance {
 		c.balance -= withdraw
 		return "Saque realizado com sucesso"
@@ -26,7 +26,7 @@ func (c *SavingsAccounts) WithdrawBalance(withdraw float64) string {
 	}
 }
 
-func (c *SavingsAccounts) Transfer(transferValue float64, acountToBeTransfer *SavingsAccounts) bool {
+func (c *CurrentAccounts) Transfer(transferValue float64, acountToBeTransfer *CurrentAccounts) bool {
 	if transferValue < c.balance && transferValue > 0 {
 		c.balance -= transferValue
 		acountToBeTransfer.Deposit(transferValue)
@@ -36,6 +36,6 @@ func (c *SavingsAccounts) Transfer(transferValue float64, acountToBeTransfer *Sa
 	}
 }
 
-func (c *SavingsAccounts) GetBalance() float64 {
+func (c *CurrentAccounts) GetBalance() float64 {
 	return c.balance
 }
